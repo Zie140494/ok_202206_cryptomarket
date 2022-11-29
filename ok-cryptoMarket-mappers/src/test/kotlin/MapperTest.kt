@@ -1,3 +1,5 @@
+package ru.otus.otuskotlin.cryptomarket.mappers
+
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import ru.otus.otuskotlin.cryptomarket.common.CrmktContext

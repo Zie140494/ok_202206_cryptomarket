@@ -1,3 +1,5 @@
+package ru.otus.otuskotlin.cryptomarket.mappers
+
 import models.CrmktOrPermissionClient
 import ru.otus.otuskotlin.cryptomarket.common.CrmktContext
 import ru.otus.otuskotlin.cryptomarket.common.exceptions.UnknownCrmktCommand
