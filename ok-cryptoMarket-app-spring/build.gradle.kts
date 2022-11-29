@@ -1,9 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-group = rootProject.group
-version = rootProject.version
-java.sourceCompatibility = JavaVersion.VERSION_11
-
 plugins {
     kotlin("jvm")
     id("org.springframework.boot") version "2.7.5"
@@ -11,6 +7,12 @@ plugins {
     kotlin("plugin.spring")
     kotlin("plugin.serialization")
 }
+
+group = rootProject.group
+version = rootProject.version
+java.sourceCompatibility = JavaVersion.VERSION_11
+
+
 
 dependencies {
     val kotestVersion: String by project
