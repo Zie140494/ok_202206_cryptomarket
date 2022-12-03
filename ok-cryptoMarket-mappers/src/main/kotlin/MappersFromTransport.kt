@@ -23,7 +23,7 @@ private fun OrDebug?.transportToWorkMode(): CrmktWorkMode = when(this?.mode) {
     OrRequestDebugMode.PROD -> CrmktWorkMode.PROD
     OrRequestDebugMode.TEST -> CrmktWorkMode.TEST
     OrRequestDebugMode.STUB -> CrmktWorkMode.STUB
-    null -> CrmktWorkMode.PROD
+    null -> CrmktWorkMode.TEST
 }
 
 private fun OrDebug?.transportToStubCase(): CrmktStubs = when(this?.stub) {

@@ -6,13 +6,10 @@ import ru.otus.otuskotlin.cryptomarket.common.models.*
 
 object OrderStub {
     private fun stubReady() = CrmktOr(
-        id = CrmktOrId(id = "123"),
-        ownerId = CrmktUserId(id = "1945"),
-        walletNumber = "123456",
+        walletNumber = "",
         fiatCurrency = CrmktFiatCurrency.RUB,
         cryptoCurrency = CrmktCryptoCurrency.BTC,
         action = CrmktAction.BUY,
-        permissionsClient = mutableSetOf(CrmktOrPermissionClient.READ)
     )
 
     private fun stubInProgress() = CrmktOr(
