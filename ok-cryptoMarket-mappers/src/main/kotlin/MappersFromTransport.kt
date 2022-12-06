@@ -1,7 +1,9 @@
-import exceptions.UnknownRequestClass
+package ru.otus.otuskotlin.cryptomarket.mappers
+
 import ru.otus.otuskotlin.cryptomarket.common.CrmktContext
 import ru.otus.otuskotlin.cryptomarket.common.models.*
 import ru.otus.otuskotlin.cryptomarket.common.stubs.CrmktStubs
+import ru.otus.otuskotlin.cryptomarket.mappers.exception.UnknownRequestClass
 import ru.otus.otuskotlin.cryptomarket.openapi.models.*
 
 fun CrmktContext.fromTransport(request: IRequest) = when(request){
@@ -21,7 +23,7 @@ private fun OrDebug?.transportToWorkMode(): CrmktWorkMode = when(this?.mode) {
     OrRequestDebugMode.PROD -> CrmktWorkMode.PROD
     OrRequestDebugMode.TEST -> CrmktWorkMode.TEST
     OrRequestDebugMode.STUB -> CrmktWorkMode.STUB
-    null -> CrmktWorkMode.PROD
+    null -> CrmktWorkMode.TEST
 }
 
 private fun OrDebug?.transportToStubCase(): CrmktStubs = when(this?.stub) {
